@@ -21,11 +21,13 @@ html{
   height: 30rem;
 }
 
+/* Header */
+
 header{
+  position: relative;
+  top: 1rem;
   display: flex;
   background-color: cadetblue;
-  position: absolute;
-  top: 1rem;
   z-index: 1;
 }
 
@@ -57,4 +59,18 @@ a{
   font-size: 1rem;
   font-family: Helvetica, sans-serif;
   text-decoration: none;
+}
+
+/* Bannerline */
+
+.bannerline{
+  display: inline-block;
+  float: right;
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  padding: 1.5rem 5rem;
+  margin-top: 10rem;
 }
