@@ -183,6 +183,8 @@ a{
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  padding-top: 3rem;
+  margin-bottom: 5rem;
 }
 
 .info{
@@ -209,22 +211,25 @@ a{
   .business-info{
     display: inline-flex;
     flex-direction: column;
-    flex-grow: 1;
-    height: auto;
+    align-items: none;
+    margin-bottom: 0rem;
+  }
+
+  .info{
+    display: flex;
     width: 100%;
+
   }
 
   .title{
-    flex-grow: 1;
+    display: flex;
     justify-content: center;
-    max-width: 100%;
+    width: 100%;
   }
 
   .text{
-    flex-grow: 1;
-    padding-bottom: 4rem;
+    padding: 0rem 0.5rem 4rem 0.5rem;
   }
-
 }
 
 footer{
@@ -238,4 +243,10 @@ footer{
 footer img{
   height: 1.5rem;
   padding-right: 1rem;
+}
+
+@media only screen and (max-width: 615px) {
+  footer{
+    margin-top: 0rem;
+  }
 }
