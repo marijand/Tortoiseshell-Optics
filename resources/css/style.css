@@ -11,6 +11,11 @@ html{
   margin: 0px auto;
 }
 
+.flex{
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Banner */
 
 .banner{
@@ -54,6 +59,10 @@ nav span{
 
 }
 
+.mobile-nav{
+  display: none;
+}
+
 a{
   color: white;
   font-size: 1rem;
@@ -67,11 +76,20 @@ a{
   }
 }
 
+@media only screen and (max-width: 615px) {
+  .large-nav{
+    display: none;
+  }
+
+  .mobile-nav{
+    display: block;
+  }
+}
+
 /* Bannerline */
 
 .bannerline{
-  display: inline-block;
-  float: right;
+  display: inline-flex;
   background-color: white;
   font-family: Helvetica, sans-serif;
   font-weight: bold;
@@ -79,6 +97,7 @@ a{
   line-height: 1.2;
   padding: 1.5rem 5rem;
   margin-top: 10rem;
+  margin-right: -2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -93,6 +112,20 @@ a{
   }
 }
 
+@media only screen and (max-width: 615px) {
+  .bannerline{
+    margin-top: 9rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-right: 0rem;
+
+  }
+
+  .banner{
+    height: 17rem;
+    background-position: 20%;
+  }
+}
 /* Serivces */
 
 .services{
@@ -101,7 +134,10 @@ a{
   align-items: baseline;
   margin: 3rem 3rem;
   padding: 0rem 3rem;
-  height: 8rem;
+}
+
+.service-image{
+    height: 8rem;
 }
 
 .service{
@@ -121,7 +157,24 @@ a{
   display: block;
   padding-top: 1rem;
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 1rem;
+
+}
+
+@media only screen and (max-width: 615px) {
+  .services{
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    margin: 0rem;
+    padding-bottom: 2rem;
+  }
+
+  .service-image{
+    padding-top: 1.54rem;
+    height:auto;
+  }
 }
 
 /* Business Info*/
@@ -129,8 +182,7 @@ a{
 .business-info{
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
-  margin: 5%;
+  justify-content: center;
 }
 
 .info{
@@ -138,6 +190,7 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 5%;
 }
 
 .title{
@@ -149,6 +202,29 @@ a{
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 1rem;
+  color: white;
+}
+
+@media only screen and (max-width: 615px) {
+  .business-info{
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto;
+    width: 100%;
+  }
+
+  .title{
+    flex-grow: 1;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .text{
+    flex-grow: 1;
+    padding-bottom: 4rem;
+  }
+
 }
 
 footer{
